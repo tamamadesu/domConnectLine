@@ -1,4 +1,4 @@
-﻿var DCLine = function(ele,parms){
+var DCLine = function(ele,parms){
 
     "use strict";
 
