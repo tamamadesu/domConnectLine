@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>连线</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .panel{
+            width: 700px;
+            margin: 5% auto;
+            overflow: hidden;
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        ul li{
+            background-color: #ccc;
+            width: 200px;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 18px;
+            margin: 40px 0;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            transitions:.4s;
+        }
+        ul li.select,ul li:active{
+            background-color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="panel">
+        <div class="list-ul left">
+            <ul>
+                <li class="list">左边1</li>
+                <li class="list">左边2</li>
+                <li class="list">左边3</li>
+                <li class="list">左边4</li>
+            </ul>
+        </div>
+        <div class="list-ul right">
+            <ul>
+                <li class="list">右边1</li>
+                <li class="list">右边2</li>
+                <li class="list">右边3</li>
+                <li class="list">右边4</li>
+            </ul>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="list-ul left">
+            <ul>
+                <li class="list">左边1</li>
+                <li class="list">左边2</li>
+                <li class="list">左边3</li>
+                <li class="list">左边4</li>
+            </ul>
+        </div>
+        <div class="list-ul right">
+            <ul>
+                <li class="list">右边1</li>
+                <li class="list">右边2</li>
+                <li class="list">右边3</li>
+                <li class="list">右边4</li>
+            </ul>
+        </div>
+    </div>
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script src="jquery.domConnectLine.js"></script>
+    <script>
+
+        $(".panel").dCLine({
+            LineCssStyle:{
+                'border':'1px solid #f00'
+            },
+            successCallback:function(options){
+                console.log(options);
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
